@@ -1,0 +1,1 @@
+newSideLength = sides6x6(fullReductionArray);
