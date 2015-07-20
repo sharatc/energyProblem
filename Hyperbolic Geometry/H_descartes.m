@@ -5,9 +5,9 @@ function [s4] = H_descartes(s)
 tempvar = zeros(3,1);
 
 for i=1:3
-    tempvar(i) = coth(2*s(i));
+    tempvar(i) = coth(s(i)/2);
 end
 
-s4 = 1/2 * acoth(2*sqrt(tempvar(1)*tempvar(2) + tempvar(1)*tempvar(3) + tempvar(2)*tempvar(3) + 1) + tempvar(1) + tempvar(2) + tempvar(3));
+s4 = 2 * acoth(2*sqrt(tempvar(1)*tempvar(2) + tempvar(1)*tempvar(3) + tempvar(2)*tempvar(3) + 1) + tempvar(1) + tempvar(2) + tempvar(3));
 end
 
